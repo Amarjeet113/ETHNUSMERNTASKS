@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .custom-background {
+              background-color: grey; 
+            }
+          </style>
+          
+    </head>
+    <body>
+        <div class="container custom-background">
+        <form>
+                <td><label for="First Name: ">First Name: </label></td>
+                <td><input type="text" id="fname" name="fname" required><br></td>
+                <td><label for="Last Name: ">Last Name: </label></td>
+                <td><input type="text" id="lname" name="lname" required><br></td>
+                <td><label for="E-mail: ">E-mail: </label></td>
+                <td><input type="email" id="email" name="email" required><br></td>
+                <td><label for="Phone: ">Phone: </label></td>
+                <td><input type="text" name="phone" size="10"><br></td>
+                <td><label for="Address: ">Address: </label></td>
+                <td><textarea cols="11" rows="5" value="address"></textarea><br></td> 
+                <td><label for="City: ">City: </label></td>
+                <td><input type="text" id="City" name="City"><br></td> 
+                <td><label for="State: ">State: </label></td>
+                <select>
+                    <option value="State">Please select your state</option>  
+                    <option value="BCA">Gujarat</option>  
+                    <option value="BBA">Rajasthan</option>  
+                    <option value="B.Tech">Punjab</option>  
+                    <option value="MBA">Maharashtra</option>  
+                    <option value="MCA">Bihar</option>  
+                     <option value="M.Tech">Karnataka</option>
+                </select><br>
+                <td><label for="Do you have hosting?: ">Do you have hosting?: </label><br></td>
+                <input type="checkbox" name="Yes">Yes<br>
+                <input type="checkbox" name="No">No<br>
+                <td><label for="Project Description: ">Project Description: </label></td>
+                <td><input type="text" id="Project Description" name="Project Description" required><br> </td> 
+                <button type="submit" class="btn btn-yellow">Send</button>
+            </div>
+        </form>
+    </body>
+</html>

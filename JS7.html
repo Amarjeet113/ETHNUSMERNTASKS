@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Task-07</title>
+    <style>
+        /* Styling for the train */
+        .train {
+            width: 300px; /* Adjust the width as needed */
+            height: 100px;
+            background-color: green;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        /* Styling for the train cars */
+        .train .train-car {
+            width: 80px; /* Adjust the width of the train cars */
+            height: 60px;
+            background-color: green;
+            position: absolute;
+            top: 20px; /* Adjust the top position to align the train cars */
+            border-radius: 10px;
+        }
+
+        /* Styling for the windows */
+        .train .train-car .window {
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            position: absolute;
+            top: 20px; /* Adjust the top position to align the windows */
+            border-radius: 50%;
+        }
+
+        /* Styling for the wheels */
+        .train .train-car .wheel {
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+            border-radius: 50%;
+        }
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: none;
+      }
+
+      button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="train">
+        <div class="train-car">
+            <div class="window"></div>
+            <div class="wheel"></div>
+            <div class="wheel" style="left: 60px;"></div>
+        </div>
+        <div class="train-car" style="left: 100px;">
+            <div class="window"></div>
+            <div class="wheel"></div>
+            <div class="wheel" style="left: 60px;"></div>
+        </div>
+        <div class="train-car" style="left: 200px;">
+            <div class="window"></div>
+            <div class="wheel"></div>
+            <div class="wheel" style="left: 60px;"></div>
+        </div>
+        <div class="container">
+          <h1>Animated Image</h1>
+          <img id="animatedImage" alt="Animated Image" />
+          <br />
+          <button id="startButton">Start</button>
+          <button id="stopButton">Stop</button>
+        </div>
+      
+    </div>
+    
+    <script>
+      const startButton = document.getElementById("startButton");
+      const stopButton = document.getElementById("stopButton");
+      const animatedImage = document.getElementById("animatedImage");
+
+      let animationInterval;
+      let currentImageIndex = 0;
+      const imageUrls = [
+        "1.JPG",
+        "2.JPG",
+        "3.JPG",
+        "4.JPG",
+        "6.JPG",
+        "5.JPG",
+      ];
+
+      startButton.addEventListener("click", () => {
+        animatedImage.style.display = "block";
+        animationInterval = setInterval(animateImage, 100);
+      });
+
+      stopButton.addEventListener("click", () => {
+        clearInterval(animationInterval);
+        animatedImage.style.display = "none";
+      });
+
+      function animateImage() {
+        animatedImage.src = imageUrls[currentImageIndex];
+        currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
+      }
+    </script>
+  </body>
+</html>

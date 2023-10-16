@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript-8</title>
+    </head>
+    <body>
+        <h1>Registration Form</h1>
+        <form id="applicationForm" enctype="multipart/form-data">
+            <label for="First Name">Fisrt Name: </label></td>
+            <input type="text" id="fname" name="fname" required><br>
+            <label for="name">Last Name: </label>
+            <input type="text" id="lname" name="lname" required><br>
+            <label for="email">Email: </label></td>
+            <input type="email" id="email" name="email" required><br></td>
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password" required><br>   
+            <label for="password">Re-enter Password: </label>
+            <input type="password" id="re-password" name="re-password" required><br>
+            <label for="gender">Gender: </label>
+            <input type="radio" name="male"/> Male <br>  
+            <input type="radio" name="female"/> Female <br>
+            <label for="age">Age: </label>
+            <input type="text" id="age" name="age" required><br>
+            <label for="phn">Phone Number:</label> 
+            <input type="text" name="phone" size="10"/><br>
+            <label for="Address">Address: </label>
+            <textarea cols="21" rows="5" value="address"></textarea><br>
+            <label for="State">State: </label>
+            <input type="text" id="state" name="state" required><br>
+            <label>Country: </label> 
+            <select>
+                <option value="Country">Choose your country</option>  
+                <option value="BCA">India</option>  
+                <option value="BBA">America</option>  
+                <option value="B.Tech">China</option>  
+                <option value="MBA">Germany</option>  
+                <option value="MCA">England</option>  
+                <option value="M.Tech">Russia</option>  
+            </select> <br>
+            <label>Language: </label>
+            <input type="checkbox" name="English"/>English
+            <input type="checkbox" name="kannad"/>Kannad
+            <input type="checkbox" name="Hindi"/>Hindi  
+            <input type="checkbox" name="Telugu"/>Telugu <br>
+            <input type="checkbox" name="check">Hereby I declare all the given details are true<br>
+            <p>Log in to <a href="https:www.Etnus.com">Ethnus</a> website</p>
+            <button type="submit" class="registerbtn">Register</button>
+    </body>
+    <script>
+        function changeFormBackgroundColor() {
+            var form = document.getElementById("applicationForm");
+            form.style.backgroundColor = "orange"; // Change the background color
+        }
+    </script>
+    
+    <button onclick="changeFormBackgroundColor()">Change Background Color</button>
+    
+    
+</html>

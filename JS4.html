@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Date and Time</title>
+</head>
+<body>
+    <h1>Date and Time Display</h1>
+    <p id="datetime"></p>
+    <button id="showDateButton">Show Date</button><br>
+    <button id="showTimeButton">Show Time</button><br>
+
+    <script>
+        // Function to display the current date and time
+        function displayDateTime() {
+            const now = new Date();
+            const datetimeElement = document.getElementById('datetime');
+            datetimeElement.innerHTML = `Current Date and Time: ${now.toLocaleString()}`;
+        }
+
+        // Event listener for the "Show Date" button
+        document.getElementById('showDateButton').addEventListener('click', function () {
+            displayDateTime();
+        });
+
+        // Event listener for the "Show Time" button
+        document.getElementById('showTimeButton').addEventListener('click', function () {
+            const now = new Date();
+            const time = now.toLocaleTimeString();
+            const datetimeElement = document.getElementById('datetime');
+            datetimeElement.innerHTML = `Current Time: ${time}`;
+        });
+    </script>
+</body>
+</html>
